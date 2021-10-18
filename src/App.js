@@ -14,7 +14,7 @@ class App extends React.Component {
     const data = {
       method: "GET",
       headers: {
-        "Content Type": "application/json"
+        "Content-Type": "application/json"
       }
     }
 
@@ -38,7 +38,7 @@ class App extends React.Component {
       <div>
         {
           arregloVacunas.map(
-            vacuna => <p>{vacuna.nombre}</p>
+            vacuna => <p>{vacuna.nombre}, {vacuna.dosis}, {vacuna.viaAplicacion}, {vacuna.laboratorio}, {vacuna.num_lote}</p>
           )
         }
       </div>
