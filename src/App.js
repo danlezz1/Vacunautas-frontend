@@ -7,7 +7,7 @@ import VacunasCrear from "./pages/VacunasCrear";
 import VacunasEditar from "./pages/VacunasEditar";
 import Creditos from "./pages/Creditos";
 
-class App extends React.Component {
+export default class App extends React.Component {
 
   render() {
 
@@ -24,5 +24,3 @@ class App extends React.Component {
     )
   }
 }
-
-export default App;
