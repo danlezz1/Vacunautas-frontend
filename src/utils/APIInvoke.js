@@ -42,7 +42,8 @@ class APIInvoke {
             headers: {'Content-Type': 'application/json'}
         }
         const url = `${config.api.baseURL}${resource}`
-        let response = (await(await fetch(url, data)).json()) 
+        let response = (await(await fetch(url, data)).json())
+        console.log(response)
         return response
     }
 }
