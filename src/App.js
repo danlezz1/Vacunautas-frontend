@@ -1,51 +1,26 @@
 import React from "react";
 import "./App.css";
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Login from "./pages/Login";
+import Home from "./pages/Home";
+import VacunasCrear from "./pages/VacunasCrear";
+import VacunasEditar from "./pages/VacunasEditar";
+import Creditos from "./pages/Creditos";
 
-class App extends React.Component {
+export default class App extends React.Component {
 
-    constructor(args) {
-        super(args)
-        this.state = ({
-            vacunas: []
-        })
-    }
+  render() {
 
-    async componentDidMount() {
-        const data = {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        }
-
-        try {
-            const response = await (await fetch('http://localhost:8080/vacunas', data)).json()
-
-            this.setState({
-                vacunas: response
-            })
-
-        } catch (error) {
-            console.log(error.message)
-        }
-    }
-
-    render() {
-
-        const arregloVacunas = this.state.vacunas
-
-        return (
-            <div className="container pt-3">
-                <h1 className="text-center">LISTA DE VACUNAS</h1>
-                <ul className="list-group list-group-flush"></ul>
-                {
-                    arregloVacunas.map((vacuna) =>
-                        <li className="list-group-item">{vacuna.nombre}</li>
-                    )
-                }
-            </div>
-        )
-    }
+    return (
+      <Router>
+        <Switch>
+          <Route path = "/" exact component = {Login} />
+          <Route path = "/home" exact component = {Home} />
+          <Route path = "/vacunas-crear" exact component = {VacunasCrear} />
+          <Route path = "/vacunas-editar/:vacunaId" exact component = {VacunasEditar} />
+          <Route path = "/creditos" exact component = {Creditos} />
+        </Switch>
+      </Router>
+    )
+  }
 }
-
-export default App;

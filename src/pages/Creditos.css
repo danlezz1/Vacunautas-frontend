@@ -1,0 +1,21 @@
+.creditos-wrap{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width:1000px;
+	min-height:580px;
+	position:relative;
+	background-color: rgba(10, 10, 10, 0.87);
+	box-shadow:0 15px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+    display: block;
+}
+
+.label-titulo{
+	color:#aaa;
+	font-size:35px;
+}
+
+.label{
+	color:rgb(253, 238, 238);
+	font-size:28px;
+}

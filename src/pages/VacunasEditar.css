@@ -1,0 +1,24 @@
+.vacunas-editar-wrap{
+	width: 100%;
+	margin:auto;
+	max-width:1000px;
+	min-height:620px;
+	position:relative;
+	background-color: rgba(10, 10, 10, 0.788);
+	box-shadow:0 15px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+
+.label{
+    width:100%;
+	color:#aaa;
+	font-size:14px;
+	display:block;
+}
+
+.input{
+    color:#fff;
+    border:none;
+	padding:15px 20px;
+	border-radius:15px;
+	background:rgba(255,255,255,.1);
+}
